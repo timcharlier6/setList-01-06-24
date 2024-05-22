@@ -1,10 +1,11 @@
 Hello !
 
-I'm Tim and I play bass.
+I'm Tim and I play bass and write code.
 
-This is a project with react, tailwind and typescript.
+This project is made with react, tailwind and typescript and a json file.
 
-I'm working also for a concert so this showing the set list I'll play.
+I was working for a concert so I made an interactive table with the songs.
+list.
 
 
 
