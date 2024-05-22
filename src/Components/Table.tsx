@@ -2,6 +2,10 @@ import { TableProps } from "../types/songType";
 import Row from './Row';
 
 const Table: React.FC<TableProps> = ({ songs }) => {
+    const toggleModal = (id: string) => {
+            const modal = document.getElementById(id);
+            modal?.classList.toggle('hidden');
+        }
 
   return (
     <table className="min-w-full bg-white shadow-md rounded-lg overflow-hidden">
@@ -16,7 +20,7 @@ const Table: React.FC<TableProps> = ({ songs }) => {
       </thead>
       <tbody className="text-gray-700">
         {songs.map((song, index) => (
-          <tr key={song.id} className="border-b border-gray-200 cursor-pointer hover:bg-blue-100 focus:ring-4 focus:outline-none focus:ring-blue-300" data-modal-target={`modal${song.id}`} data-modal-toggle={`modal${song.id}`}>
+          <tr key={song.id} className="border-b border-gray-200 cursor-pointer hover:bg-blue-100 focus:ring-4 focus:outline-none focus:ring-blue-300" onClick={() => toggleModal(`modal${song.id}`) }>
             <Row song={song} index={index}/>
           </tr>
         ))}
